@@ -6,5 +6,6 @@ ENV CRON_TIME="0 3 * * *" \
   TZ=GB \
   CRON_TZ=GB
 
-ADD run.sh /run.sh
+COPY ./run.sh /run.sh
+
 CMD ["/run.sh"]
