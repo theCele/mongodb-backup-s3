@@ -6,7 +6,8 @@ ENV CRON_TIME="0 3 * * *" \
   TZ=GB \
   CRON_TZ=GB
 
-COPY ./run.sh /run.sh
+ADD run.sh /run.sh
 
 RUN chmod +x /run.sh
+
 ENTRYPOINT [ "/bin/sh", "/run.sh" ]
