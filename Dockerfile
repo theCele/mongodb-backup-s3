@@ -8,4 +8,5 @@ ENV CRON_TIME="0 3 * * *" \
 
 COPY ./run.sh /run.sh
 
-CMD ["/run.sh"]
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]
